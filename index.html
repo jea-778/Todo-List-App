@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do-list App</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Bungee&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <!--  -->
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <div class="left-content">
+            <h2>TO-DO LIST</h2>
+          </div>
+
+          <div class="right-content">
+            <div id="profilImg">
+              <img
+                src="./image/logo/profil.png"
+                alt="Profil"
+                class="foto-profil"
+                id="fotoProfil"
+              />
+              <div class="dropdown-container">
+                <div class="dropdown" id="profilDropdown">
+                  <p><strong>Nama</strong> : Jea Darmarifa</p>
+                  <p><strong>Jabatan</strong> : FSD ENGINER</p>
+                  <div class="logout">
+                    <img src="./image/enter.png" alt="" />
+                    <button>LOG OUT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="todo-logo">
+          <h1>TODO LIST <img src="./image/logo/todo.png" alt="" /></h1>
+          <p>Tingkatkan Produktivitas Waktu Mu</p>
+          <p id="updateTanggal"></p>
+        </div>
+
+        <div class="divider"></div>
+        <p id="errorMessage">Tambahkan tugas dulu!</p>
+
+        <div class="wrapper">
+          <form id="taskInput">
+            <input type="text" placeholder="Tambahkan tugas mu" />
+            <button type="submit" id="btnAdd">Tambah</button>
+          </form>
+
+          <div class="content-cont">
+            <div class="priority-container">
+              <select id="prioritySelect" class="priority-select">
+                <option class="low" value="low">LOW</option>
+                <option class="medium" value="medium">MEDIUM</option>
+                <option class="high" value="high">HIGH</option>
+              </select>
+            </div>
+
+            <div class="date-container">
+              <div class="date-input" id="dateInput">
+                <input type="date" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="controls">
+          <div class="filters">
+            <span id="all" class="active">All</span>
+            <span id="todo">Todo</span>
+            <span id="done">Done</span>
+            <button class="clear-btn" onclick="deleteAllTask()">
+              Clear All
+            </button>
+          </div>
+        </div>
+
+        <ul id="taskList">
+          <li id="task">
+            <label for="1">
+              <input type="checkbox" id="1" />
+              <p>Belajar main bola sepak</p>
+            </label>
+            <i class="uil uil-trash"></i>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+
+  <script src="main.js"></script>
+</html>
