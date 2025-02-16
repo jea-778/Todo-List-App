@@ -663,6 +663,26 @@ li {
 @media screen and (max-width: 375px) {
   .dropdown {
     display: none;
+    padding: 5px;
+    width: 130px;
+  }
+
+  .dropdown p {
+    font-size: 8px;
+    margin-left: 20px;
+  }
+
+  .dropdown button {
+    font-size: 8px;
+  }
+
+  .dropdown img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .logout p {
+    font-size: 6px;
   }
 
   .container {
@@ -747,6 +767,6 @@ li {
 
   #errorMessage {
     font-size: 8px;
-    margin-right: 10px;
+    margin-left: -20px;
   }
 }
