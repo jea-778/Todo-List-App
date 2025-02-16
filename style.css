@@ -661,6 +661,11 @@ li {
 }
 
 @media screen and (max-width: 375px) {
+  .todo-logo img {
+    width: 30px;
+    height: 30px;
+  }
+
   .dropdown {
     display: none;
     padding: 5px;
